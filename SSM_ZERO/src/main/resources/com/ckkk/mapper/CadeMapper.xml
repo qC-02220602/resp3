@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ckkk.mapper.CadeMapper">
+    <select id="queryAll" resultType="Cade">
+        select * from cade
+    </select>
+
+    <update id="addPower" >
+        update cade set power = power+#{power} where cname=#{addname}
+    </update>
+
+    <update id="delPower" >
+        update cade set power = power-#{power} where cname=#{delname}
+    </update>
+
+
+</mapper>
